@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    background-color: rgb(235, 235, 235);
+    padding: 0px;
+}
+
+.navbar-container {
+    background-color: #ff7171;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.navbar-contains {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1140px;
+}
+
+
+.navbar-contains>div {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-contains>* {
+    color: white;
+}
