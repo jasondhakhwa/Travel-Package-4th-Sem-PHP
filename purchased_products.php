@@ -14,11 +14,13 @@ if (!$result) {
 };
 ?>
 
-<div class="product-item-contains">
+<div class="items-container">
+    <div class="items-contains">
+        <div class="product-item-contains">
 
-    <?php
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo <<<__PRODUCT__
+            <?php
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo <<<__PRODUCT__
         <div class='product-item-container'>
             <img src="./image/$row[image]" class="product-image" />
             <div class="product-info">
@@ -28,8 +30,10 @@ if (!$result) {
             </div>
         </div>
 __PRODUCT__;
-    }
-    ?>
+            }
+            ?>
+        </div>
+    </div>
 </div>
 </body>
 

@@ -30,18 +30,25 @@ if (isset($_GET['purchase'])) {
 		die("Query error: " . mysqli_error($connection));
 	}
 	mysqli_close($connection);
-	echo "<h2>Data Inserted Successfully</h2>";
+	echo "<h2>Package Purchased</h2>";
 }
 
 
 echo <<<__HTML__
+
+<div class="items-container">
+    <div class="items-contains">
 <div class='product-item-container'>
+<div class-'image-div'>
 	<img src="./image/$row[image]" class="product-image" />
+	</div>
 	<div class="product-info">
 		<span>Name: $row[Product]</span>
 		<span>Price: $row[Price]</span>
 		<a class="btn" href='product.php?id=$row[ID]&Product=$row[Product]&Price=$row[Price]&image=$row[image]&purchase=true'>Purchase</a>
 	</div>
+</div>
+</div>
 </div>
 __HTML__;
 ?>

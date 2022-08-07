@@ -5,7 +5,13 @@
 }
 
 .product-image{
-    width: 300px;
+    width: 298px;
+    height: 200px;
+}
+
+.image-div{
+    height: 200px;
+
 }
 
 .product-info{
@@ -21,4 +27,5 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    width: 1260px;
 }

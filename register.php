@@ -29,28 +29,30 @@ function showForm()
 {
   echo <<<__REGISTER__
   <!-- Register Container -->
-  <div class="login-container">
-    <h2>Register</h2>
-    <form action="$_SERVER[PHP_SELF]" method="POST">
-      <table>
-        <tr>
-          <td>Username:</td>
-          <td><input placeholder="Username" name='username'/></td>
-        </tr>
-        <tr>
-          <td>Password:</td>
-          <td><input placeholder="Password" name='password'/></td>
-        </tr>
-        <input type="hidden" value="1" name='__CHECK__' />
-        <tr>
-          <td>
-            <button type='submit'>Register</button>
-          </td>
-        </tr>
-      </table>
-    </form>
-    <div>
-      <p>Already have an account? <a href="login.php">Login</a></p>
+  <div class='log-contains'>
+    <div class="login-container">
+      <h2>Register</h2>
+      <form action="$_SERVER[PHP_SELF]" method="POST">
+        <table>
+          <tr>
+            <td>Username:</td>
+            <td><input placeholder="Username" name='username'/></td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td><input placeholder="Password" name='password'/></td>
+          </tr>
+          <input type="hidden" value="1" name='__CHECK__' />
+          <tr>
+            <td>
+              <button type='submit'>Register</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <div>
+        <p>Already have an account? <a href="login.php" class='acc-button'>Login</a></p>
+      </div>
     </div>
   </div>
 __REGISTER__;

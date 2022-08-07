@@ -1,11 +1,14 @@
-<?php session_start();
-$username=$_SESSION['user1']['Username'];
-?>
+<?php session_start(); 
+if (isset($_SESSION['user1'])) {
+    $username=$_SESSION['user1']['Username'];
+}
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <title>Travel Package</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +21,7 @@ $username=$_SESSION['user1']['Username'];
     <div class="navbar-container">
         <div class="navbar-contains">
             <div>
-                <img src='../images/logo/piggy2.png' alt="logo">
+                <img src='./images/plane.jpg' alt="logo" class="nav-image">
             </div>
             <div>
                 <a href="products.php">Products</a>
