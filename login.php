@@ -54,7 +54,7 @@ function showForm()
                         </tr>
                         <tr>
                             <td>Password:</td>
-                            <td><input placeholder="Password" name='password'/></td>
+                            <td><input placeholder="Password" name='password' type='password'/></td>
                         </tr>
                         <input type="hidden" value="1" name='__CHECK__' />
                         <tr>

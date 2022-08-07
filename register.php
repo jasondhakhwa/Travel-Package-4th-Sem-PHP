@@ -2,10 +2,48 @@
 
 <?php
 if (isset($_POST['__CHECK__'])) {
-  saveData();
+  if ($error = validateForm()) {
+    showErrors($error);
+    showForm();
+  } else {
+    saveData();
+  }
 } else {
   showForm();
 }
+
+
+function showErrors($errors)
+{
+  echo <<< ERROR_TEXT
+    <h2>Plese Correct These Errors</h2>
+    <ul>
+    ERROR_TEXT;
+
+  foreach ($errors as $error) {
+    echo "<li>$error</li>";
+  }
+
+  echo "</ul>";
+}
+
+
+function validateForm()
+{
+  $errors = array();
+
+  if (strlen($_POST['username']) < 2) {
+    $errors[] = "Username must be at least two characters long";
+  }
+
+  if (strlen($_POST['password']) < 6) {
+    $errors[] = "Password must be at least six characters long";
+  }
+
+
+  return $errors;
+}
+
 
 function saveData()
 {
@@ -40,7 +78,7 @@ function showForm()
           </tr>
           <tr>
             <td>Password:</td>
-            <td><input placeholder="Password" name='password'/></td>
+            <td><input placeholder="Password" name='password' type='password'/></td>
           </tr>
           <input type="hidden" value="1" name='__CHECK__' />
           <tr>

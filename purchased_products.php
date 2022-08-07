@@ -1,4 +1,10 @@
-<?php include('./include/header.php'); ?>
+<?php include('./include/header.php');
+
+if (!isset($_SESSION['user1'])) {
+    header("Location: http://localhost/College/Web%20App/LumantiWebApp/travel_package/login.php");
+}
+
+?>
 
 <!-- For calling products from database -->
 <?php
@@ -25,8 +31,8 @@ if (!$result) {
             <img src="./image/$row[image]" class="product-image" />
             <div class="product-info">
                 <span>Name:  $row[Product]</span>
-                <span>Price: $row[Product]</span>
-                <button class="btn">Purchaseed</button>
+                <span>Price: $row[Price]</span>
+                <button class="btn">Purchased</button>
             </div>
         </div>
 __PRODUCT__;
